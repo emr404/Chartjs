@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas class="myChart">
+
+        </canvas>
+
+        <div class="names">
+
+        </div>
+    </div>
+
+    <script>
+
+        let chart = document.querySelector('.myChart').getContext('2d');
+        let theChart = new Chart(chart, {
+
+
+            type: 'radar', // bar horizontal bar, pie, doughnut, radar,polar area
+            data: {
+                labels: ['Ronaldo', 'Messi', 'Hazard', 'Immobile', 'Lewandowski', 'Rashford', 'Martial', 'Sancho', 'Fernandes', 'Pogba'],
+                datasets: [{
+                    label: 'Goals',
+                    data: [
+                        41,
+                        25,
+                        1,
+                        36,
+                        34,
+                        11,
+                        22,
+                        10,
+                        3,
+                        14,
+                    ],
+                    borderWidth: 2,
+                    fill: false,
+                    backgroundColor: 'red',
+                    borderColor: 'red'
+
+                }, {
+                    label: 'Assists',
+                    data: [
+                        25,
+                        21,
+                        5,
+                        6,
+                        5,
+                        15,
+                        21,
+                        10,
+                        2,
+                        11,
+                    ],
+                    borderWidth: 2,
+                    fill: false,
+                    backgroundColor: 'blue',
+                    borderColor: 'blue'
+
+                }],
+
+
+
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+
